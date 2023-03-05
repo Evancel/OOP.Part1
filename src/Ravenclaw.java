@@ -40,23 +40,8 @@ public class Ravenclaw extends Hogwarts{
                         ", creativity: " + creativity);
     }
 
-    public int sumPointsOfRavenclaw(){
-        int sumPoints = this.getWizardSkills() +
-                this.getTransgressionSkills() +
-                this.getIntelligence() +
-                this.getWisdom() +
-                this.getWit() +
-                this.getCreativity();
-        return sumPoints;
-    }
-
-    public void compareRavenclaws(Ravenclaw ravenclaw){
-        if (this.sumPointsOfRavenclaw() > ravenclaw.sumPointsOfRavenclaw()){
-            System.out.println(this.getFullName() + " лучший равенкловец, чем " + ravenclaw.getFullName());
-        } else if (this.sumPointsOfRavenclaw() < ravenclaw.sumPointsOfRavenclaw()){
-            System.out.println(ravenclaw.getFullName() + " лучший равенкловец, чем " + this.getFullName());
-        } else if (this.sumPointsOfRavenclaw() == ravenclaw.sumPointsOfRavenclaw()){
-            System.out.println(this.getFullName() + " и " + ravenclaw.getFullName() + "равные равенкловцы.");
-        }
+    @Override
+    public int sumPersonalAttributes() {
+        return intelligence + wisdom + wit+ creativity;
     }
 }

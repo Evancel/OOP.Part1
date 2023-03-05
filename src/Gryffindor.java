@@ -33,22 +33,8 @@ public class Gryffindor extends Hogwarts{
                 ", bravery: " + bravery);
     }
 
-    public int sumPointsOfGryffindor(){
-        int sumPoints = this.getWizardSkills() +
-                this.getTransgressionSkills() +
-                this.getGenerosity() +
-                this.getHonor() +
-                this.getBravery();
-        return sumPoints;
-    }
-
-    public void compareGryffindors(Gryffindor gryffindor){
-        if (this.sumPointsOfGryffindor() > gryffindor.sumPointsOfGryffindor()){
-            System.out.println(this.getFullName() + " лучший гриффиндорец, чем " + gryffindor.getFullName());
-        } else if (this.sumPointsOfGryffindor() < gryffindor.sumPointsOfGryffindor()){
-            System.out.println(gryffindor.getFullName() + " лучший гриффиндорец, чем " + this.getFullName());
-        } else if (this.sumPointsOfGryffindor() == gryffindor.sumPointsOfGryffindor()){
-            System.out.println(this.getFullName() + " и " + gryffindor.getFullName() + "равные гриффиндорцы.");
-        }
+    @Override
+    public int sumPersonalAttributes() {
+        return generosity + honor + bravery;
     }
 }

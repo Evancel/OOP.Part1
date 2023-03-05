@@ -33,22 +33,8 @@ public class Hufflepuff extends Hogwarts{
                         ", honesty: " + honesty);
     }
 
-    public int sumPointsOfHufflepuff(){
-        int sumPoints = this.getWizardSkills() +
-                this.getTransgressionSkills() +
-                this.getIndustriousness() +
-                this.getLoyalty() +
-                this.getHonesty();
-        return sumPoints;
-    }
-
-    public void compareHufflepuffs(Hufflepuff hufflepuff){
-        if (this.sumPointsOfHufflepuff() > hufflepuff.sumPointsOfHufflepuff()){
-            System.out.println(this.getFullName() + " лучший хаффлпафец, чем " + hufflepuff.getFullName());
-        } else if (this.sumPointsOfHufflepuff() < hufflepuff.sumPointsOfHufflepuff()){
-            System.out.println(hufflepuff.getFullName() + " лучший хаффлпафец, чем " + this.getFullName());
-        } else if (this.sumPointsOfHufflepuff() == hufflepuff.sumPointsOfHufflepuff()){
-            System.out.println(this.getFullName() + " и " + hufflepuff.getFullName() + "равные хаффлпафцы.");
-        }
+    @Override
+    public int sumPersonalAttributes() {
+        return industriousness + loyalty + honesty;
     }
 }

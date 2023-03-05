@@ -23,19 +23,31 @@ public abstract class Hogwarts {
 
     public abstract void printStudent();
 
-    public int sumPointsOfStudent(){
+    public int sumBasicAttributes(){
         int sumPoints = this.getWizardSkills() +
                 this.getTransgressionSkills();
         return sumPoints;
     }
 
-    public void compareStudents(Hogwarts hogwarts){
-        if (this.sumPointsOfStudent() > hogwarts.sumPointsOfStudent()){
+    public void compareBasicAttributes(Hogwarts hogwarts){
+        if (this.sumBasicAttributes() > hogwarts.sumBasicAttributes()){
             System.out.println(this.getFullName() + " лучший студент, чем " + hogwarts.getFullName());
-        } else if (this.sumPointsOfStudent() < hogwarts.sumPointsOfStudent()){
+        } else if (this.sumBasicAttributes() < hogwarts.sumBasicAttributes()){
             System.out.println(hogwarts.getFullName() + " лучший студент, чем " + this.getFullName());
-        } else if (this.sumPointsOfStudent() == hogwarts.sumPointsOfStudent()){
+        } else if (this.sumBasicAttributes() == hogwarts.sumBasicAttributes()){
             System.out.println(this.getFullName() + " и " + hogwarts.getFullName() + "равные студенты.");
+        }
+    }
+
+    public abstract int sumPersonalAttributes();
+
+    public void comparePersonalAttributes(Hogwarts hogwarts){
+        if (this.sumPersonalAttributes() > hogwarts.sumPersonalAttributes()){
+            System.out.println(this.getFullName() + " лучший гриффиндорец, чем " + hogwarts.getFullName());
+        } else if (this.sumPersonalAttributes() < hogwarts.sumPersonalAttributes()){
+            System.out.println(hogwarts.getFullName() + " лучший гриффиндорец, чем " + this.getFullName());
+        } else if (this.sumPersonalAttributes() == hogwarts.sumPersonalAttributes()){
+            System.out.println(this.getFullName() + " и " + hogwarts.getFullName() + "равные гриффиндорцы.");
         }
     }
 }

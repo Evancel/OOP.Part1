@@ -31,11 +31,11 @@ public class Main {
 
         System.out.println();
 
-        gryffindorStudents[0].compareGryffindors(gryffindorStudents[1]);
-        gryffindorStudents[1].compareGryffindors(gryffindorStudents[2]);
-        slytherinStudents[1].compareSlytherins(slytherinStudents[2]);
-        ravenclawStudents[2].compareRavenclaws(ravenclawStudents[1]);
-        hufflepuffStudents[1].compareHufflepuffs(hufflepuffStudents[0]);
-        gryffindorStudents[1].compareStudents(slytherinStudents[0]);
+        gryffindorStudents[0].comparePersonalAttributes(gryffindorStudents[1]);
+        gryffindorStudents[1].comparePersonalAttributes(gryffindorStudents[2]);
+        slytherinStudents[1].comparePersonalAttributes(slytherinStudents[2]);
+        ravenclawStudents[2].comparePersonalAttributes(ravenclawStudents[1]);
+        hufflepuffStudents[1].comparePersonalAttributes(hufflepuffStudents[0]);
+        gryffindorStudents[1].compareBasicAttributes(slytherinStudents[0]);
     }
 }
